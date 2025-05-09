@@ -1,0 +1,60 @@
+---
+---
+
+<header class="w-full py-6 px-4 md:px-8 flex justify-between items-center">
+  <div class="font-anybody text-3xl md:text-4xl text-white tracking-wider font-black">
+    RAYDAR
+  </div>
+  
+  <nav class="hidden md:flex space-x-8">
+    <a href="#features" class="text-white hover:text-primary-100 transition-colors">Възможности</a>
+    <a href="#demo" class="text-white hover:text-primary-100 transition-colors">Демо</a>
+    <a href="#download" class="text-white hover:text-primary-100 transition-colors">Изтегли</a>
+  </nav>
+  
+  <div class="md:hidden">
+    <button id="menu-toggle" class="text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-primary-700 bg-opacity-95 z-50 flex flex-col items-center justify-center">
+  <button id="close-menu" class="absolute top-6 right-4 text-white focus:outline-none">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+  
+  <nav class="flex flex-col space-y-8 text-center">
+    <a href="#features" class="text-white text-xl hover:text-primary-100 transition-colors">Възможности</a>
+    <a href="#demo" class="text-white text-xl hover:text-primary-100 transition-colors">Демо</a>
+    <a href="#download" class="text-white text-xl hover:text-primary-100 transition-colors">Изтегли</a>
+  </nav>
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const closeMenu = document.getElementById('close-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('#mobile-menu a');
+
+  menuToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeMenu?.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+  });
+</script>

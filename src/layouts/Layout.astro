@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="bg">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.ico" sizes="32x32">
+		<link rel="icon" href="/icon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<meta name="generator" content={Astro.generator} />
+		<title>RAYDAR - 3D Production Renderer</title>
+		<meta name="description" content="RAYDAR - Мощен 3D визуализатор с проследяване на лъчи и имплементации за GPU и CPU" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@900&display=swap" rel="stylesheet">
+	</head>
+	<body class="min-h-screen bg-gradient-to-b from-[#78001E] via-[#9D0028] to-[#800020] text-white font-geist">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@font-face {
+		font-family: 'Geist';
+		src: url('https://assets.vercel.com/raw/upload/v1670950274/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Geist';
+		src: url('https://assets.vercel.com/raw/upload/v1670950274/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Geist';
+		src: url('https://assets.vercel.com/raw/upload/v1670950274/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+</style>

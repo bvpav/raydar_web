@@ -1,0 +1,107 @@
+---
+import { CONFIG } from "../config";
+
+---
+
+<section id="demo" class="w-full py-16 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-center">Галерия</h2>
+    <p class="text-white/80 text-center max-w-2xl mx-auto mb-12">Вижте RAYDAR в действие с тези впечатляващи визуализирани изображения</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div class="group">
+        <div class="rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105">
+          <img 
+            src="/src/assets/demos/glass_menagerie.png" 
+            alt="Колекция от стъклени сфери" 
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-2 text-white/80 text-sm group-hover:text-white transition-colors">Стъклени сфери с отражение и пречупване</p>
+      </div>
+      
+      <div class="group">
+        <div class="rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105">
+          <img 
+            src="/src/assets/demos/cornell.png" 
+            alt="Cornell box сцена" 
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-2 text-white/80 text-sm group-hover:text-white transition-colors">Интериорна сцена с глобално осветление</p>
+      </div>
+      
+      <div class="group">
+        <div class="rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105">
+          <img 
+            src="/src/assets/demos/metallic_showroom.png" 
+            alt="Метални материали" 
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-2 text-white/80 text-sm group-hover:text-white transition-colors">Сцена с метални материали и сложни отражения</p>
+      </div>
+      
+      <div class="group">
+        <div class="rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105">
+          <img 
+            src="/src/assets/demos/colorful_caustics.png" 
+            alt="Демонстрация на каустика" 
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-2 text-white/80 text-sm group-hover:text-white transition-colors">Демонстрация на каустика</p>
+      </div>
+      
+      <div class="group">
+        <div class="rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105">
+          <img 
+            src="/src/assets/demos/nested_materials.png" 
+            alt="Сцена с различни материали" 
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-2 text-white/80 text-sm group-hover:text-white transition-colors">Вложени материали и сложно осветление</p>
+      </div>
+      
+      <div class="group">
+        <div class="rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105">
+          <img 
+            src="/src/assets/demos/festive.png" 
+            alt="Празнична сцена" 
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-2 text-white/80 text-sm group-hover:text-white transition-colors">Празнична сцена с разнообразни светлинни ефекти</p>
+      </div>
+    </div>
+    
+    <div class="mt-16">
+      <h3 class="text-2xl md:text-3xl font-semibold mb-8 text-center">Представяне на проекта</h3>
+      
+  <div class="mt-16 w-full max-w-4xl mx-auto animate-slide-up" style="animation-delay: 0.3s;">
+    <div class="relative overflow-hidden pb-[56.25%] rounded-xl shadow-2xl">
+      <iframe 
+        src={`https://www.youtube.com/embed/${CONFIG.youtubeVideo.id}`} 
+        class="absolute top-0 left-0 w-full h-full"
+        title="RAYDAR Demo Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+          
+      
+      <p class="text-center text-white/80 mt-4">
+        Кратко видео представяне на проекта и неговите възможности
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+import { CONFIG } from '../config';
+
+// Server-side redirect
+export function getStaticPaths() {
+  return [{ params: { } }];
+}
+
+const { youtubeVideo } = CONFIG;
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content={`0;url=${youtubeVideo.url}`} />
+  <title>Redirecting to YouTube...</title>
+  <script define:vars={{ videoUrl: youtubeVideo.url }}>
+    window.location.href = videoUrl;
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href={youtubeVideo.url}>RAYDAR Demo Video</a>...</p>
+</body>
+</html> 
